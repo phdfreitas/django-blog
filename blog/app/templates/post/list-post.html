@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Django Blog - Last Posts
+{% endblock title %}
+
+{% block content %}
+    {% for post in object_list %}
+        <h1>{{post.titulo}}</h1>
+        <h3>{{post.descricao}}</h3>
+    {% endfor %}
+{% endblock content %}

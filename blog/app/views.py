@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView
+from . models import Post
 
-def index(request):
-    return HttpResponse("Olá, mundo!")
+class PostListView(ListView):
+    model = Post
+    template_name = 'post/list-post.html'
 
