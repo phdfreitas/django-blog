@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Django Blog - Excluir Post
+{% endblock title %}
+
+{% block content %}
+    <h1>Excluir Post</h1>
+    <h4>Essa operação não poderá ser desfeita.</h4>
+    <form method="post"> {% csrf_token %}
+        <p>Você tem certeza que deseja excluir {{post.titulo}}?</p>
+        <p>Outra opção é deixar o post privado apenas para você.</p>
+        <input type="submit" value="Excluir">
+    </form>
+{% endblock content %}

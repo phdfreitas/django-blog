@@ -25,9 +25,15 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('postDetail', args=[self.slug])
 
+    def get_absolute_url_update(self):
+        return reverse('postUpdate', args=[self.slug])
+
+    def get_absolute_url_delete(self):
+        return reverse('postDelete', args=[self.slug])
+
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(f'post-{self.autor.username}-{self.titulo}')
+            self.slug = slugify(f'post-by-{self.autor.username}-{self.titulo}')
         return super().save(*args, **kwargs)
 
     class Meta:
