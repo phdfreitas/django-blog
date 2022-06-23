@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blog - Nova conta
+{% endblock title %}
+
+{% block content %}
+    <h2>Abra sua conta</h2>
+    <form method="post">{% csrf_token %}
+        <div>
+            {{form.as_ul}}
+        </div>
+
+        <button type="submit" class="btn btn-success">Cadastre-se</button>
+    </form>
+{% endblock content %}
