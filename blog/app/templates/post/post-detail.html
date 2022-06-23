@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blog - {{post.titulo}}    
+{% endblock title %}
+
+{% block content %}
+    <h1>{{post.titulo}}</h1>
+    <p>{{post.descricao}}</p>
+{% endblock content %}
