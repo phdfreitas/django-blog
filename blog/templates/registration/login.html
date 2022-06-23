@@ -4,6 +4,11 @@
     Django Blog - Login
 {% endblock title %}
 
+{% block header %}
+    Django Blog - Login
+{% endblock header %}
+
+
 {% block content %}
     <h2>Faça seu login</h2>
     <form method="post">{% csrf_token %}
