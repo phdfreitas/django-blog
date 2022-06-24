@@ -1,15 +1,35 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     Django Blog - Excluir Post
 {% endblock title %}
 
+{% block header %}
+    <header class="masthead" style="background-image: url({% static 'assets/img/post-bg.jpg' %})">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>{{post.titulo}}</h1>
+                        <h2 class="subheading">{{post.subtitulo}}</h2>
+                        <span class="meta">
+                            Postado por
+                            <a href="#!">{{post.autor}}</a>
+                            em {{post.publicacao}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock header %}
+
 {% block content %}
-    <h1>Excluir Post</h1>
     <h4>Essa operação não poderá ser desfeita.</h4>
     <form method="post"> {% csrf_token %}
-        <p>Você tem certeza que deseja excluir {{post.titulo}}?</p>
-        <p>Outra opção é deixar o post privado apenas para você.</p>
-        <input type="submit" value="Excluir">
+        <p>Você tem certeza que deseja excluir <strong>{{post.titulo}}?</strong></p>
+        <p>Outra opção é deixar o post <strong>privado</strong> apenas para você.</p>
+        <button type="submit" class="btn btn-danger text-uppercase">Excluir</button>
     </form>
 {% endblock content %}

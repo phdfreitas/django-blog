@@ -1,0 +1,29 @@
+.blog-form{
+    border: 1px solid black;
+    text-align: center;
+    width: 80%;
+    padding: 15px;
+    margin-left: 50px;
+}
+
+.blog-form li{
+    list-style-type: none;
+}
+
+.blog-form li>label{
+    font-weight: 300;
+    width: 100%;
+}
+
+.blog-form button{
+    margin-top: 10px;
+}
+
+select{
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+textarea{
+    resize: none;
+}
