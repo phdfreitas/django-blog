@@ -36,9 +36,11 @@
         </div>
     </article>
     
-    <div class="detalhes">
-        <div class="d-flex justify-content-end mb-4"><a class="btn btn-warning text-uppercase" href="{{post.get_absolute_url_update}}">Atualizar Post</a></div>
-        <div class="d-flex justify-content-end mb-4"><a class="btn btn-danger text-uppercase" href="{{post.get_absolute_url_delete}}">Excluir Post</a></div>
-    </div>
+    {% if user.is_authenticated and user.username == post.autor.username %}
+        <div class="detalhes">
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-warning text-uppercase" href="{{post.get_absolute_url_update}}">Atualizar Post</a></div>
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-danger text-uppercase" href="{{post.get_absolute_url_delete}}">Excluir Post</a></div>
+        </div>
+    {% endif %}
     
 {% endblock content %}
