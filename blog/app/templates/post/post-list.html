@@ -23,17 +23,31 @@
 {% block content %}
     <div class="post-preview">
         {% for post in object_list %}
-            <a href="{{post.get_absolute_url}}">        
-                <h2 class="post-title">{{post.titulo}}</h2>
-                <h4 class="post-subtitle">{{post.subtitulo}}</h4>
-            </a>
-            <p class="post-meta">
-                Postado por
-                <a href="#!">{{post.autor}}</a>
-                {{post.publicacao}}
-            </p>
-            <!-- Divider-->
-            <hr class="my-4" /> 
+            {% if post.status == 'disponível' and post.autor.username != user.username %}
+                <a href="{{post.get_absolute_url}}">        
+                    <h2 class="post-title">{{post.titulo}}</h2>
+                    <h4 class="post-subtitle">{{post.subtitulo}}</h4>
+                </a>
+                <p class="post-meta">
+                    Postado por
+                    <a href="#!">{{post.autor}}</a>
+                    {{post.publicacao}}
+                </p>
+                <!-- Divider-->
+                <hr class="my-4" />
+            {% elif post.autor.username == user.username %}
+                <a href="{{post.get_absolute_url}}">        
+                    <h2 class="post-title">{{post.titulo}}</h2>
+                    <h4 class="post-subtitle">{{post.subtitulo}}</h4>
+                </a>
+                <p class="post-meta">
+                    Postado por
+                    <a href="#!">{{post.autor}}</a>
+                    {{post.publicacao}}
+                </p>
+                <!-- Divider-->
+                <hr class="my-4" />
+            {% endif %} 
         {% endfor %}
     </div>
     <!-- Pager-->
