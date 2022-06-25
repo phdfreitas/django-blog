@@ -16,9 +16,9 @@ A ideia principal com o desenvolvimento desse projeto é revisar os conceitos do
 
 :heavy_check_mark: Lista de todos os posts públicos (Visualização apenas do título e subtítulo - Exemplo em imagem abaixo)
 
-:heavy_check_mark: Excluir posts
+:heavy_check_mark: Excluir post
 
-:heavy_check_mark: Posts públicos ou privados
+:heavy_check_mark: Post público ou privado
 
 :heavy_check_mark: Visualização apenas de posts públicos
 
