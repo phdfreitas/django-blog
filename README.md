@@ -14,7 +14,7 @@ A ideia principal com o desenvolvimento desse projeto é revisar os conceitos do
 
 :heavy_check_mark: Fazer um novo post
 
-:heavy_check_mark: Lista de todos os posts públicos (Visualização apenas do título e subtítulo - Exemplo em imagem abaixo)
+:heavy_check_mark: Lista de todos os posts públicos 
 
 :heavy_check_mark: Excluir post
 
@@ -24,8 +24,10 @@ A ideia principal com o desenvolvimento desse projeto é revisar os conceitos do
 
 :heavy_check_mark: Cadastro de novos usuários
 
-:exclamation: Acesso apenas para usuários autenticados em algumas funcionalidades (em desenvolvimento)
+:exclamation: Usuários só tem controle de seus próprios posts (atualização e exclusão)
 
+:exclamation: Usuários não autenticados têm navegação limitada.
+ 
 <p align="center">
     <img src="blog/static/assets/img/readme/02.png">
     <span>Exemplo da lista de posts.</span>
