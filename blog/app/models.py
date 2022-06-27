@@ -9,7 +9,7 @@ from django.utils.text import slugify
 from django.db.models.signals import post_save
 
 class Post(models.Model):
-    STATUS      = (('disponível', 'Disponível'), ('indisponível', 'Indisponível'))
+    STATUS      = (('publico', 'Público'), ('privado', 'Privado'))
     titulo      = models.CharField(max_length=100)
     subtitulo   = models.CharField(max_length=100)
     slug        = models.SlugField(max_length=100)
